@@ -1,1 +1,1 @@
-<h1>Page d'accueil du dossier /cars</h1>
+<h1>Nos voitures</h1>

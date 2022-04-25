@@ -3,12 +3,12 @@
 class UtilisateurManager extends Manager
 {
 
-    public const TABLE = "utilisateur";
+    public const TABLE_utilisateur = "utilisateur";
 
     public function getAllUtilisateur()
     {
 
-        $sql = "SELECT * FROM " . self::TABLE;
+        $sql = "SELECT * FROM " . self::TABLE_utilisateur;
         $query = $this->getPdo()->query($sql);
         return $query->fetchAll();
     }
@@ -16,7 +16,7 @@ class UtilisateurManager extends Manager
     public function getUtilisateurbyId(int $id)
     {
 
-        $sql = "SELECT * FROM " . self::TABLE . " WHERE id = :id";
+        $sql = "SELECT * FROM " . self::TABLE_utilisateur . " WHERE id = :id";
         $query = $this->getPdo()->prepare($sql);
         $query->execute([
             'id' => $id
@@ -28,7 +28,7 @@ class UtilisateurManager extends Manager
     public function addUtilisateur(string $prenom, string $nom, string $ville, string $email, string $mot_de_passe, string $date_naissance)
     {
             
-            $sql = "INSERT INTO " . self::TABLE . " (prenom,nom,ville,email,creation_client,mot_de_passe,date_naissance) VALUES (:prenom,:nom,:ville,:email, NOW(), :mot_de_passe,:date_naissance)";
+            $sql = "INSERT INTO " . self::TABLE_utilisateur . " (prenom,nom,ville,email,creation_client,mot_de_passe,date_naissance) VALUES (:prenom,:nom,:ville,:email, NOW(), :mot_de_passe,:date_naissance)";
             $query = $this->getPdo()->prepare($sql);
             $query->execute([
                 'prenom' => $prenom,
