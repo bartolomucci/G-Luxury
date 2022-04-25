@@ -1,0 +1,1 @@
+<h1>T'essayes d'accéder à une putain de page pas authorisé mec</h1>
