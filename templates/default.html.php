@@ -11,7 +11,6 @@
 </head>
 
 <body>
-
     <header>
         </nav>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -42,7 +41,9 @@
 
 
     <main>
+        <div class="container">
         <?= $content ?>
+        </div>
     </main>
 
     <footer>

@@ -1,0 +1,34 @@
+h2 span
+{
+    color: #2c2a2a;
+    text-transform: lowercase;
+    font-weight: lighter;
+    font-size: 0.9em;
+    letter-spacing: 0.2em;
+    padding-left: 15px;
+}
+
+
+.caracteristique
+{
+    text-transform: lowercase;
+    font-weight: lighter;
+    letter-spacing: 0.4em;
+    padding-top: 45px;
+}
+
+.offer
+{
+    margin-bottom: 55px;
+}
+
+.vertical
+{
+    padding-top: 120px;
+}
+
+.car
+{
+    width: 600px;
+    height: 300px;
+}
