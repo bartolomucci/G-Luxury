@@ -12,25 +12,21 @@ class HomeController
     }
     
 
-    public function display()
+    public function show()
     {
-        require_once '../src/managers/VehiculeManager.php';
-        $instanceVehicule = new VehiculeManager();
-        $view = new View('home/display-cars.html.php', [
-            'vehicules' => $instanceVehicule->getAllVehicule()
+        require_once '../src/managers/VehicleManager.php';
+        $instanceVehicule = new VehicleManager();
+        $view = new View('home/show-cars.html.php', [
+            'vehicles' => $instanceVehicule->getAllVehicles()
         ]);
         $view->render();
         
     }
 
-    public function offers()
+    public function rating()
     {
-        require_once '../src/managers/OffresManager.php';
-        $instanceOffres = new OffresManager();
-        $view = new View('home/offers.html.php', [
-            'offres' => $instanceOffres->getAllOffres()
-        ]);
-        $view->render();
+        
     }
+
 
 }

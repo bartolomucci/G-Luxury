@@ -1,1 +1,1 @@
-<h1 class="text-center text-secondary">Accueil</h1>
+<h1 class="text-center text-secondary"></h1>

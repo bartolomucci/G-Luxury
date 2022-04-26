@@ -18,9 +18,10 @@ class AdminController
         $view->render();
         if(isset($_POST['submit']))
         {
-            require '../src/managers/VehiculeManager.php';
-            $vehiculeManager = new VehiculeManager();
-            $exec = $vehiculeManager->insertVehicule($_POST['marque'], $_POST['modele'], $_POST['couleur'], $_POST['carburant'], $_POST['prix'], $_POST['puissance_din'], $_POST['puissance_fiscale'], $_POST['image'], $_POST['vitesse_maximum'], $_POST['zero_a_cent']);
+            require '../src/managers/VehicleManager.php';
+            $vehiculeManager = new VehicleManager();
+            $exec = $vehiculeManager->insertVehicule($_POST['brand'], $_POST['model'], $_POST['color'], $_POST['fuel'], $_POST['horsepower'], $_POST['fiscalpower'], $_POST['maximum_speed'], $_POST['car_image'], $_POST['zero_hundred']);
+            header('Location: /?controller=admin');
         }
     }
 

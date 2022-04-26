@@ -14,25 +14,19 @@
     <header>
         </nav>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="/">
-                <img src="https://i.ibb.co/hCQ3J2j/Logo-GLuxury.png" width="285px">
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
                         <a class="nav-link" href="/?controller=home">Accueil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/?controller=home&action=display">Nos véhicules</a>
+                        <a class="nav-link" href="/?controller=home&action=show">Nos véhicules</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/?controller=home&action=offers">Nos offres</a>
+                        <a class="nav-link" href="/?controller=home&action=rating">Avis</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" href="/?controller=admin">Admin</a>
+                        <a class="nav-link hidden" href="/?controller=admin">Admin</a>
                     </li>
                 </ul>
             </div>

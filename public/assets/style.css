@@ -1,25 +1,57 @@
-h2 span
+h2 span:last-child
 {
     color: #2c2a2a;
-    text-transform: lowercase;
+    text-transform: uppercase;
     font-weight: lighter;
-    font-size: 0.9em;
+    font-size: 0.4em;
     letter-spacing: 0.2em;
     padding-left: 15px;
 }
 
+h2 span:nth-child(2)
+{
+    text-transform: uppercase;
+    font-weight: lighter;
+    font-size: 1.2em;
+    padding-right: 10px;
+}
+
+h2 span:first-child
+{
+    color: #2c2a2a;
+    text-transform: uppercase;
+    animation-name: opacity;
+    animation-duration: 2.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    padding-right: 10px;
+}
+
+@keyframes opacity
+{
+    0%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 1;
+    }
+}
 
 .caracteristique
 {
-    text-transform: lowercase;
+    text-transform: uppercase;
     font-weight: lighter;
     letter-spacing: 0.4em;
-    padding-top: 45px;
+    padding-top: 60px;
 }
 
 .offer
 {
-    margin-bottom: 55px;
+    position: relative;
+    top: -125px;
+    left: -270px;
 }
 
 .vertical
@@ -31,4 +63,17 @@ h2 span
 {
     width: 600px;
     height: 300px;
+    border-radius: 500px;
+    -webkit-border-radius: 500px;
+    -moz-border-radius: 500px;
+    -ms-border-radius: 500px;
+    -o-border-radius: 500px;
+    filter:  drop-shadow(15px 8px 5px #0a0013);
+    -webkit-filter:  drop-shadow(15px 8px 5px #0a0013);
+    border: #000000 solid 2px;
+}
+
+img .car:hover
+{
+    opacity: 0.5;
 }
