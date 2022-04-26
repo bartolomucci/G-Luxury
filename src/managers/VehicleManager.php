@@ -34,4 +34,12 @@ class VehicleManager extends Manager
         return $query->fetchAll();
     }
 
+    public function getVehicleById()
+    {
+        $sql = "SELECT * FROM " . self::TABLE_vehicule . " WHERE id_vehicle = :id_vehicle";
+        $query = $this->getPdo()->prepare($sql);
+        $query->execute(['id_vehicle' => $_GET['id_vehicle']]);
+        return $query->fetchAll();
+    }
+
 }

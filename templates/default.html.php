@@ -20,7 +20,7 @@
                         <a class="nav-link" href="/?controller=home">Accueil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/?controller=home&action=show">Nos véhicules</a>
+                        <a class="nav-link" href="/?controller=home&action=show">Véhicules</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/?controller=home&action=rating">Avis</a>

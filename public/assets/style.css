@@ -77,3 +77,61 @@ img .car:hover
 {
     opacity: 0.5;
 }
+
+h3#heures span.text
+{
+    font-size: 1.1em;
+    font-weight: bolder;
+    color: #2c2a2a;
+    text-transform: uppercase;
+    animation-name: retraction;
+    animation-duration: 2.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes retraction
+{
+    0%
+    {
+        opacity: 0.8;
+    }
+    100%
+    {
+        opacity: 1;
+    }
+}
+
+p span.italic
+{
+    font-style: italic;
+    font-weight: lighter;
+    color: #2c2a2a;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    padding-left: 15px;
+}
+
+p span.definition
+{
+    font-weight: bolder;
+    color: #2c2a2a;
+    text-transform: uppercase;
+}
+
+p span.caution-price
+{
+    font-weight: bolder;
+    color: #850a0a;
+    text-transform: uppercase;
+    font-size: 1.2em;
+}
+
+p span.caution
+{
+    font-weight: lighter;
+    color: #2c2a2a;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 1em;
+}

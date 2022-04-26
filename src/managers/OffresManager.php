@@ -2,7 +2,7 @@
 
 class OffresManager extends Manager
 {
-    public const TABLE_offre = 'offres';
+    public const TABLE_offre = 'offers';
 
 
     public function getAllOffres()
@@ -12,19 +12,12 @@ class OffresManager extends Manager
         return $query->fetchAll();
     }
 
-
-    public function addOffre(string $prix, string $kilometrage, string $heures, string $jours, string $caution)
+    public function getOffersbyVehicleId()
     {
-        $sql = "INSERT INTO " . self::TABLE_offre . " (prix,kilometrage,heures,jours,caution) VALUES (:prix,:kilometrage,:heures,:jours,:caution)";
+        $sql = "SELECT * FROM " . self::TABLE_offre . " WHERE id_vehicle = :id_vehicle";
         $query = $this->getPdo()->prepare($sql);
-        $query->execute([
-            'prix' => $prix,
-            'kilometrage' => $kilometrage,
-            'heures' => $heures,
-            'jours' => $jours,
-            'caution' => $caution
-        ]);
-
+        $query->execute(['id_vehicle' => $_GET['id_vehicle']]);
         return $query->fetchAll();
     }
+
 }
