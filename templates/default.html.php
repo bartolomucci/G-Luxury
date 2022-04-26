@@ -17,16 +17,16 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a class="nav-link" href="/?controller=home">Accueil</a>
+                        <a class="nav-link text-uppercase" href="/?controller=home">Accueil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/?controller=home&action=show">Véhicules</a>
+                        <a class="nav-link text-uppercase" href="/?controller=home&action=show">Véhicules</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/?controller=home&action=rating">Avis</a>
+                        <a class="nav-link text-uppercase" href="/?controller=home&action=rating">Avis</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link hidden" href="/?controller=admin">Admin</a>
+                        <a class="nav-link text-uppercase hidden" href="/?controller=admin">Admin</a>
                     </li>
                 </ul>
             </div>

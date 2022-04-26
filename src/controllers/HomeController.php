@@ -11,6 +11,12 @@ class HomeController
         $view->render();
     }
     
+    public function rating()
+    {
+        $view = new View('home/rating.html.php');
+        $view->render();
+    }
+
 
     public function show()
     {
@@ -34,11 +40,6 @@ class HomeController
             'vehicle' => $instanceVehicule->getVehicleById()
         ]);
         $view->render();
-    }
-
-    public function rating()
-    {
-
     }
 
 
