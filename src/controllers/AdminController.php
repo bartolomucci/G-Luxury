@@ -12,7 +12,7 @@ class AdminController
         $view->render();
     }
 
-    public function create()
+    public function createVehicle()
     {
         $view = new View('admin/create-vehicule.html.php');
         $view->render();

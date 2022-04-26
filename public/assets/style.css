@@ -135,3 +135,11 @@ p span.caution
     letter-spacing: 0.2em;
     font-size: 1em;
 }
+
+label
+{
+    font-weight: bolder;
+    color: #a00707;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+}

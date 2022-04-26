@@ -1,55 +1,55 @@
 
-<h1>Ajout d'un véhicule à la base de donnée</h1>
+<h1 class="text-center text-danger text-uppercase pb-3 uppercase">Création d'un véhicule</h1>
 
-<form action="" method="post">
+<form class="form" action="" method="post">
 
-    <div>
+    <div class="form-group">
         <label for="marque">Marque</label>
-        <input type="text" name="brand" id="marque">
+        <input class="form-control" type="text" name="brand" id="marque">
     </div>
 
-    <div>
+    <div class="form-group">
         <label for="modele">Modèle</label>
-        <input type="text" name="model" id="modele">
+        <input class="form-control" type="text" name="model" id="modele">
     </div>
 
-    <div>
+    <div class="form-group">
         <label for="couleur">Couleur</label>
-        <input type="text" name="color" id="couleur">
+        <input class="form-control" type="text" name="color" id="couleur">
     </div>
 
-    <div>
+    <div class="form-group">
         <label for="carburant">Carburant</label>
-        <input type="text" name="fuel" id="carburant">
+        <input class="form-control" type="text" name="fuel" id="carburant">
     </div>
 
-    <div>
-        <label for="puissance_din">Puissance (DIN)</label>
-        <input type="text" name="horsepower" id="puissance_din">
+    <div class="form-group">
+        <label for="puissance_din">Puissance DIN (uniquement le nombre)</label>
+        <input class="form-control" type="text" name="horsepower" id="puissance_din">
     </div>
 
-    <div>
-        <label for="puissance_fiscale">Puissance (FISCALE)</label>
-        <input type="text" name="fiscalpower" id="fiscalpower">
+    <div class="form-group">
+        <label for="puissance_fiscale">Puissance=FISCALE (uniquement le nombre)</label>
+        <input class="form-control" type="text" name="fiscalpower" id="fiscalpower">
     </div>
 
-    <div>
-        <label for="vitesse_max">Vitesse Maximum</label>
-        <input type="text" name="maximum_speed" id="vitesse_max">
+    <div class="form-group">
+        <label for="vitesse_max">Vitesse Maximum (uniquement le nombre)</label>
+        <input class="form-control" type="text" name="maximum_speed" id="vitesse_max">
     </div>
 
-    <div>
-        <label for="image">Image</label>
-        <input type="text" name="car_image" id="image">
+    <div class="form-group">
+        <label for="image">Image (lien)</label>
+        <input class="form-control" type="text" name="car_image" id="image">
     </div>
 
-    <div>
+    <div class="form-group">
         <label for="zero_a_cent">0 à 100 km/h (uniquement les décimal)</label>
-        <input type="text" name="zero_hundred" id="zero_a_cent">
+        <input class="form-control" type="text" name="zero_hundred" id="zero_a_cent">
     </div>
 
-    <div>
-        <input type="submit" name="submit" value="Créer">
+    <div class="text-center">
+        <input class="btn btn-danger mt-5" type="submit" name="submit" value="Créer">
     </div>
 
 
