@@ -1,3 +1,10 @@
+html
+{
+    font-size: 14px;
+    line-height: 1.42857143;
+}
+
+
 h2 span:last-child
 {
     color: #2c2a2a;
@@ -90,6 +97,18 @@ h3#heures span.text
     animation-fill-mode: forwards;
 }
 
+span.confident
+{
+    font-size: 1.1em;
+    font-weight: lighter;
+    color: #08151b;
+    text-transform: uppercase;
+    animation-name: retraction;
+    animation-duration: 2.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
 @keyframes retraction
 {
     0%
@@ -145,4 +164,38 @@ label
     color: #2c2a2a;
     text-transform: uppercase;
     letter-spacing: 0.3em;
+}
+
+.redimension
+{
+    padding-top: 10px;
+    position: relative;
+    top: 2px;
+    left: -311px;
+}
+
+.redimension img
+{
+    width: 100vw;
+    height: 100%;
+}
+
+.company
+{
+    position: relative;
+    top:  -395px;
+    left: -190px;
+}
+
+.luxury
+{
+    font-size: 3.5em;
+    font-weight: bold;
+}
+
+.imgs
+{
+    position: relative;
+    top: 0px;
+    left: 100px;
 }
