@@ -23,6 +23,10 @@ class AdminController
     {
         $view = new View('admin/create-vehicule.html.php');
         $view->render();
+    }
+
+    public function createVehiclePOST()
+    {
         if(isset($_POST['submit']))
         {
             require '../src/managers/VehicleManager.php';
@@ -34,16 +38,60 @@ class AdminController
 
     public function updateVehicle()
     {
-        $view = new View('admin/update-vehicule.html.php');
+        require '../src/managers/VehicleManager.php';
+        $vehiculeManager = new VehicleManager(); 
+        $view = new View('admin/update-vehicle.html.php', [
+            'vehicle' => $vehiculeManager->getVehicleById()
+        ]);
         $view->render();
+    }
+
+    public function updateVehiclePOST()
+{
+    if(isset($_POST['submit']))
+    {
         require '../src/managers/VehicleManager.php';
         $vehiculeManager = new VehicleManager();
-        $vehicule = $vehiculeManager->getVehicleById();
-        if(isset($_POST['submit']))
+        $exec = $vehiculeManager->updateVehicleById($_POST['brand'], $_POST['model'], $_POST['color'], $_POST['fuel'], $_POST['horsepower'], $_POST['fiscalpower'], $_POST['maximum_speed'], $_POST['car_image'], $_POST['zero_hundred'], $_GET['id_vehicle']);
+        $view = new View('admin/index.html.php');
+        header('Location: /?controller=admin');
+    }
+}
+
+public function deleteVehicle()
+{
+    require '../src/managers/VehicleManager.php';
+    $vehiculeManager = new VehicleManager(); 
+    $view = new View('admin/delete-vehicle.html.php', [
+        'vehicle' => $vehiculeManager->getVehicleById()
+    ]);
+    $view->render();
+}
+
+
+public function deleteVehiclePOST()
+{
+    if(isset($_POST['submit']))
+    {
+        if($_POST['confirm'] == "yes")
         {
-            $exec = $vehiculeManager->updateVehicleById($_POST['brand'], $_POST['model'], $_POST['color'], $_POST['fuel'], $_POST['horsepower'], $_POST['fiscalpower'], $_POST['maximum_speed'], $_POST['car_image'], $_POST['zero_hundred'], $_GET['id_vehicle']);
+            require '../src/managers/VehicleManager.php';
+            $vehiculeManager = new VehicleManager();
+            $exec = $vehiculeManager->deleteVehicleById($_GET['id_vehicle']);
+            $view = new View('admin/index.html.php');
+            header('Location: /?controller=admin');
+
+        }
+        else
+        {
+            $view = new View('admin/index.html.php');
             header('Location: /?controller=admin');
         }
     }
+}
+
+
+
 
 }
+

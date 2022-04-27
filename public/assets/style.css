@@ -82,7 +82,7 @@ h3#heures span.text
 {
     font-size: 1.1em;
     font-weight: bolder;
-    color: #2c2a2a;
+    color: #08151b;
     text-transform: uppercase;
     animation-name: retraction;
     animation-duration: 2.5s;
@@ -94,11 +94,11 @@ h3#heures span.text
 {
     0%
     {
-        opacity: 0.8;
+        opacity: 1;
     }
     100%
     {
-        opacity: 1;
+        opacity: 0.8;
     }
 }
 
@@ -114,9 +114,12 @@ p span.italic
 
 p span.definition
 {
-    font-weight: bolder;
+    font-weight:700;
     color: #2c2a2a;
     text-transform: uppercase;
+    font-size: 1.2em;
+    padding-right: 10px;
+    letter-spacing: 0.1em;
 }
 
 p span.caution-price
@@ -138,8 +141,8 @@ p span.caution
 
 label
 {
-    font-weight: bolder;
-    color: #a00707;
+    font-weight: lighter;
+    color: #2c2a2a;
     text-transform: uppercase;
     letter-spacing: 0.3em;
 }

@@ -42,4 +42,31 @@ class VehicleManager extends Manager
         return $query->fetchAll();
     }
 
+    public function updateVehicleById()
+    {
+        $sql = "UPDATE " . self::TABLE_vehicule . " SET brand = :brand, model = :model, color = :color, fuel = :fuel, horsepower = :horsepower, fiscalpower = :fiscalpower, maximum_speed = :maximum_speed, car_image = :car_image, zero_hundred = :zero_hundred WHERE id_vehicle = :id_vehicle";
+        $query = $this->getPdo()->prepare($sql);
+        $query->execute([
+            'brand' => $_POST['brand'],
+            'model' => $_POST['model'],
+            'color' => $_POST['color'],
+            'fuel' => $_POST['fuel'],
+            'horsepower' => $_POST['horsepower'],
+            'fiscalpower' => $_POST['fiscalpower'],
+            'maximum_speed' => $_POST['maximum_speed'],
+            'car_image' => $_POST['car_image'],
+            'zero_hundred' => $_POST['zero_hundred'],
+            'id_vehicle' => $_GET['id_vehicle']
+        ]);
+        return $query->fetchAll();
+    }
+
+    public function deleteVehiclebyId()
+    {
+        $sql = "DELETE FROM " . self::TABLE_vehicule . " WHERE id_vehicle = :id_vehicle";
+        $query = $this->getPdo()->prepare($sql);
+        $query->execute(['id_vehicle' => $_GET['id_vehicle']]);
+        return $query->fetchAll();
+    }
+
 }

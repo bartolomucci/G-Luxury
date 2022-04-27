@@ -1,7 +1,7 @@
 
-<h1 class="text-center text-danger text-uppercase pb-3 uppercase">Création d'un véhicule</h1>
+<h1 class="text-center text-dark text-uppercase pb-3 uppercase">Création d'un véhicule</h1>
 
-<form class="form" action="" method="post">
+<form class="form" action="/?controller=admin&action=createVehiclePOST" method="post">
 
     <div class="form-group">
         <label for="marque">Marque</label>
@@ -29,7 +29,7 @@
     </div>
 
     <div class="form-group">
-        <label for="puissance_fiscale">Puissance=FISCALE (uniquement le nombre)</label>
+        <label for="puissance_fiscale">Puissance FISCALE (uniquement le nombre)</label>
         <input class="form-control" type="text" name="fiscalpower" id="fiscalpower">
     </div>
 
@@ -49,7 +49,7 @@
     </div>
 
     <div class="text-center">
-        <input class="btn btn-danger mt-5" type="submit" name="submit" value="Créer">
+        <input class="btn btn-success mt-5" type="submit" name="submit" value="Créer">
     </div>
 
 

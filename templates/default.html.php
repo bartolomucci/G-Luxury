@@ -12,7 +12,6 @@
 
 <body>
     <header>
-        </nav>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
@@ -30,13 +29,25 @@
                     </li>
                 </ul>
             </div>
+
+            <div class="text-end">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link text-uppercase" href="/?controller=home&action=login">Connexion</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-uppercase" href="/?controller=home&action=register">Inscription</a>
+                    </li>
+                </ul>
+            </div>
+
         </nav>
     </header>
 
 
     <main>
         <div class="container">
-        <?= $content ?>
+            <?= $content ?>
         </div>
     </main>
 
